@@ -178,7 +178,7 @@ transition: slide-left
 
 <v-clicks>
 
-- Cloud adoption has growth exponentially in the last years
+- Cloud adoption has grown exponentially in the last years
 - Software architecture has evolved (Microservices, distributed systems, ...)
 - **Containers are the new normal ([CNCF Annual Survey 2022](https://www.cncf.io/reports/cncf-annual-survey-2022/))**
 
@@ -581,8 +581,6 @@ layout: statement
 
 # Live demo
 
-GitHub: [TODO](TODO)
-
 ---
 layout: statement
 transition: slide-left
@@ -595,14 +593,12 @@ hideInToc: true
 transition: slide-left
 ---
 
-# What could we improve?
+# Wrap-up
 
-<v-clicks>
-
-- Automatically rollout our applications when a lease has expired (zero downtime renewal)
-- Extend this credentials mechanism to humans who need to access DBs
-
-</v-clicks>
+- Our pods have unique, short-lived credentials
+- Adding a new service requires only to create two roles in Vault and a SA in Kubernetes
+- Several solutions are available to gracefully renew the credentials
+- This workflow can be also applied to humans to give temporary access to DBs
 
 ---
 hideInToc: true
@@ -613,11 +609,12 @@ transition: slide-left
 
 <v-clicks>
  
-- **Vault must be considered as a SPOF**
-- Vault is a critical component, [harden it](https://developer.hashicorp.com/vault/tutorials/operations/production-hardening) carefully.
+- **Vault is a critical component and must be considered as a SPOF, [harden it](https://developer.hashicorp.com/vault/tutorials/operations/production-hardening) carefully**
+- Carefully define your lease durations (remember: the shorter is better!)
+- Always use the least privilege for your different Vault roles
 - If you run it in **Kubernetes**, deploy it in a dedicated cluster
 - Enable the auto unseal feature
-- Avoid exposing the Vault API/UI publicly
+- Do not expose the Vault API/UI publicly
 - Use Terraform to provision your Vault resources
 
 </v-clicks>
@@ -630,3 +627,14 @@ layout: statement
 # Thank you
 
 Any questions?
+
+<div class="flex items-center space-x-15">
+    <div>
+        <img class="w-50" src="/qr-talk.png" alt="QR Code to go to the talk link">
+        <a href="https://thomasgouveia.github.io/talks/dynamic-database-credentials-with-hashicorp-vault">Slides</a>
+    </div>
+    <div>
+        <img class="w-50" src="/qr-demo-repo.png" alt="QR Code to go to the talk demo repository on GitHub">
+        <a href="https://github.com/thomasgouveia/vault-dynamic-mongodb-credentials">GitHub Demo</a>
+    </div>
+</div>
