@@ -1,0 +1,17 @@
+{
+  "name": "dynamic-database-credentials-with-hashicorp-vault",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /talks/dynamic-database-credentials-with-hashicorp-vault"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.46.2",
+    "@slidev/theme-apple-basic": "^0.20.0",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.41.1"
+  }
+}
