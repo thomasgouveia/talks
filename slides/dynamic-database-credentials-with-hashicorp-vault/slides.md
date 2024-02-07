@@ -601,7 +601,7 @@ transition: slide-left
 
 ---
 hideInToc: true
-transition: slide-left
+transition: slide-up
 ---
 
 # Recommendations
@@ -627,7 +627,7 @@ layout: statement
 
 Any questions?
 
-<div class="flex items-center space-x-15">
+<div class="flex items-center space-x-70">
     <div>
         <img class="w-50" src="/qr-talk.png" alt="QR Code to go to the talk link">
         <a href="https://thomasgouveia.github.io/talks/dynamic-database-credentials-with-hashicorp-vault">Slides</a>
