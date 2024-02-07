@@ -13,7 +13,6 @@ favicon: /vault-logo.svg
 presenter: dev
 download: true
 author: Thomas Gouveia
-remoteAssets: true
 hideInToc: true
 ---
 
